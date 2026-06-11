@@ -18,5 +18,6 @@ menjadi
 ```
 git clone https://github.com/Mayasadev/yt-ex-c-pb.git
 mv yt-ex-c-pb/.github/workflows-template yt-ex-c-pb/.github/workflows
-
 ```
+## license 
+MIT
