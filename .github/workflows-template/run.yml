@@ -52,14 +52,14 @@ jobs:
       - name: Hapus kode negara pertama
         id: pop
         run: |
-          REMOVED=$(jq -r '.queue[0]' countries.json)
+          REMOVED=$(jq -r '.queue[0]' kode_negara.json)
           echo "removed=$REMOVED" >> $GITHUB_OUTPUT
           [ "$REMOVED" = "null" ] && exit 0
-          jq 'del(.queue[0])' countries.json > tmp.json && mv tmp.json countries.json
+          jq 'del(.queue[0])' kode_negara.json > tmp.json && mv tmp.json kode_negara.json
 
       - name: Commit hasil
         if: steps.pop.outputs.removed!= 'null'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: ${{ steps.pop.outputs.removed }} removed after script [skip ci]"
-          file_pattern: countries.json
+          file_pattern: kode_negara.json
