@@ -1,22 +1,20 @@
 # yt-ex-c-pb
-Script buat ambil data video trending + komentar YouTube per negara.
+Script buat ambil data video trending untuk setiap negara yang berubah setiap hari.
 
-## Install
-```
-pip install pandas pyarrow google-api-python-client pytz
-```
 
 ## Setup
 1. Isi API key di main.py
    api_key = "YOUR_KEY"
-2. Bikin kode_negara.json
-   {"kode_negara": ["ID", "US"]}
+2. ganti path
+```
+.github/workflows-template
+``` 
+menjadi 
+```
+.github/workflows
+```
 
-## Run
-python main.py
+## Git Clone
+```
 
-## Output
-- komentar_only_ID_20260611.parquet
-- data_gabungan_ID_20260611.parquet
-
-Note: Kuota 10,000 unit/hari. Auto stop kalau habis.
+```
